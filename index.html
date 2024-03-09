@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confusion Matrix By Shivam</title>
+    <link rel="stylesheet" href="/ML/index.css">
+</head>
+
+<body>
+    <!-- navbar -->
+    <nav class="navbar background">
+        <ul class="nav-list">
+            <div class="logo"><img src="/ML/img/gla.jpg" alt="logo"></div>
+            <li><a href="#intro">Introduction</a></li>
+            <li><a href="#error">Errors in ML</a></li>
+            <li><a href="#numerical">Confusion Matrix</a></li>
+            <li><a href="#contact">Ask Query</a></li>
+        </ul>
+        <div class="rightNav">
+            <input type="text" name="search" id="search" placeholder="Search here">
+            <button class="btn btn-sm">Search</button>
+        </div>
+    </nav>
+
+    <!-- Introduction -->
+    <section id="intro">
+        <h2 class="text-center-intro">Introduction</h2>
+        <div class="sub-intro">
+            <div class="intro-para">
+                <p><span class="left">Name:</span><span class="right" id="intro-name"><a href="https://glauniversity.in:8085/Home/TempHome" target="_blank">Shivam Soni</a></span></p>
+                <p><span class="left">Topic:</span><span class="right" id="geek"><a
+                            href="https://www.geeksforgeeks.org/confusion-matrix-machine-learning/" target="_blank"
+                            id="greek-a">Confusion Matrix</a></span></p>
+                <p><span class="left">Roll no:</span><span class="right">34</span></p>
+                <p><span class="left">Submitted to:</span><span class="right" id="intro-tech"><a href="https://www.gla.ac.in/academics/faculty-detail/1213/dr-ruby-panwar" target="_blank">Dr. Ruby Panwar</a></span></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Errors in ML -->
+
+    <section id="error" class="h-resp error-2">
+        <h1 class="text-center">Errors in Machine Learning</h1>
+        <div class="details-container">
+            <details id="details-1" class="one-resp">
+                <summary id="summary-1">Reduciable Errors</summary>Reduciable Error in Machine learning means the
+                mistakes that can be
+                fixed or reduced by improving out model and the way we work with data. <br>These errors happen
+                because
+                our
+                model might be too simple, too complex, or not trained well enough.
+                <div class="img-container">
+                    <div class="img-left">
+
+
+
+
+
+                        
+                        <img src="/ML/img/cat.jpg" alt="">
+                        <h3 class="text-center text-img">Cat</h3>
+                    </div>
+                    <div class="img-btn">
+                        <button id="img-btn">Search</button>
+                    </div>
+                    <div id="dog-img" class="img-right visibility">
+                        <img id="doggy" src="/ML/img/dog.jpg" alt="">
+                        <h3 id="error-heading" class="text-center text-img">Cat</h3>
+                    </div>
+                </div>
+            </details>
+            <details id="details-2" class="two-resp">
+                <summary id="summary-2">Irreduciable Errors</summary>Irreduciable Error is a kind of mistakes that
+                will always be
+                there,no
+                matter how our good our model is. <br>This is because there is always some randomness or
+                unpredictability in
+                real-world data. And our model cannot eliminat it entirely.
+                <details>
+                    <summary id="eg">Examples</summary>
+                    <h5 class="eg-heading">Temperature</h5>
+                    <h5 class="eg-heading">Human Speech Recognition</h5>
+                    <h5 class="eg-heading">Speaker Variability</h5>
+                    <h5 class="eg-heading">Overlapping Speech</h5>
+                </details>
+            </details>
+        </div>
+        <h4 class="text-center">For more details</h4>
+        <div class="link-btn">
+            <button class="yt"><a href="https://youtu.be/OcRkVTYKHeU?si=7h9QwlHQ7zl8xges"
+                    target="_blank">YouTube</a></button>
+            <button class="info"><a href="https://www.geeksforgeeks.org/machine-learning/" target="_blank">Geeks
+                    Book</a></button>
+            <button class="mam"><a href="https://www.gla.ac.in/academics/faculty-detail/1213/dr-ruby-panwar"
+                    target="_blank">Professor</a></button>
+            <button class="mam-email"><a href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#search/ruby.panwar%40gla.ac.in?compose=new" target="_blank">Email Us</a></button>
+        </div>
+    </section>
+
+    <!-- Confusion Matrix -->
+    <section id="numerical" class="num-background">
+        <h1>Confusion Matrix</h1>
+        <div class="form">
+            <div class="form-input">
+                <label for="tn">TN</label>
+                <input type="number" id="tn" placeholder="True Negative">
+            </div>
+
+            <div class="form-input">
+                <label for="fp">FP</label>
+                <input type="number" id="fp" placeholder="False Positive">
+            </div>
+
+            <div class="form-input">
+                <label for="fn">FN</label>
+                <input type="number" id="fn" placeholder="False Negative">
+            </div>
+
+            <div class="form-input">
+                <label for="tp">TP</label>
+                <input type="number" id="tp" placeholder="True Positive">
+            </div>
+            <br>
+            <input type="submit" onclick="run()" value="Run">
+        </div>
+        <div class="output">
+            <div class="paras">
+                <p class="para">Accuracy:<span id="acc"></span></p>
+                <p class="para">Error rate:<span id="err"></span></p>
+                <p class="para">Precision:<span id="pre"></span></p>
+                <p class="para">Recall:<span id="rec"></span></p>
+                <p class="para">F-score:<span id="fsc"></span></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Query -->
+    <section class="contact" id="contact">
+        <h2 class="text-center">Ask Your Query</h2>
+        <form action="">
+            <input class="form-group" type="text" name="name" id="name" placeholder="Enter Your Name" required>
+            <input class="form-group" type="text" name="phone" id="phone" placeholder="Enter Your Phone" required>
+            <input class="form-group" type="email" name="email" id="email" placeholder="Enter Your Email" required>
+            <textarea class="form-group" name="text" id="text" cols="30" rows="10"
+                placeholder="What is your Query"></textarea>
+            <input type="submit" class="btn2" value="Submit">
+
+        </form>
+        <div class="gpt-btn">
+            <button class="chatgpt" id="chatgpt">Ask ChatGPT</button>
+        </div>
+
+    </section>
+
+    <script>
+        function run() {
+
+            let a = document.getElementById("tn").value;
+            let b = document.getElementById("fp").value;
+            let c = document.getElementById("fn").value;
+            let d = document.getElementById("tp").value;
+            tn = Number.parseInt(a);
+            fp = Number.parseInt(b);
+            fn = Number.parseInt(c);
+            tp = Number.parseInt(d);
+            // console.log(tn);
+            // console.log(fp);
+            // console.log(fn);
+            // console.log(tp);
+
+            const accuracy = (tp + tn) / (tp + tn + fp + fn);
+            const error = (fp + fn) / (tp + tn + fp + fn)
+            const precision = (tp) / (tp + fp);
+            const recall = (tp) / (tp + fn);
+            const f_score = (precision * recall) / (precision + recall);
+            // console.log("Accuracy is "+accuracy);
+            // console.log("Error rate is "+error);
+            // console.log("Precision is "+precision);
+            // console.log("Recall is "+recall);
+            // console.log("F-score is "+f_score);
+
+            let acc = document.getElementById("acc").innerHTML = accuracy;
+            let err = document.getElementById("err").innerHTML = error;
+            let pre = document.getElementById("pre").innerHTML = precision;
+            let rec = document.getElementById("rec").innerHTML = recall;
+            let fsc = document.getElementById("fsc").innerHTML = f_score;
+
+        }
+
+        i = document.getElementById("chatgpt");
+        i.addEventListener("click", () => {
+            location.href = "https://chat.openai.com/";
+        });
+
+        let l = document.getElementById("dog-img");
+        let z = document.getElementById("img-btn");
+        let dog = document.getElementById("doggy");
+        let heading = document.getElementById("error-heading");
+        let err=document.getElementById("error");
+        let h=document.getElementById("details-1");
+        z.addEventListener("click", () => {
+            l.classList.toggle("visibility");
+            setTimeout(() => {
+                alert("Error:  This is not a Cat");
+            }, 1500);
+            setTimeout(() => {
+                let c = confirm("Do you want to fix that Error");
+                if (c == true) {
+                    dog.setAttribute("src", "/ML/img/cat.2.jpg");
+                    heading.innerHTML = "Cat";
+                }
+            }, 6000);
+
+        })
+        // h.addEventListener("click",()=>{
+        //     err.style.toggle.(height="1450px");
+        // })
+
+
+    </script>
+</body>
+
+</html>
