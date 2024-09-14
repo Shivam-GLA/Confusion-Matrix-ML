@@ -91,7 +91,7 @@ html {
 }
 
 .background {
-    background: rgba(0, 0, 0, 0.7) url("/ML/img/bg.5.jpg");
+    background: rgba(0, 0, 0, 0.7) url("/img/bg.5.jpg");
     background-size: cover;
     background-blend-mode: darken;
 }
@@ -238,7 +238,7 @@ html {
     padding-left:30px;
 }
 .num-background{
-    background: rgba(0, 0, 0, 0.7) url("/ML/img/bg.9.jpg");
+    background: rgba(0, 0, 0, 0.7) url("/img/bg.9.jpg");
     background-size: cover;
     background-blend-mode: darken;
 }
@@ -320,7 +320,7 @@ form {
 #intro::before{
     content:"";
     position:absolute;
-    background:url("/ML/img/bg.19.jpg")no-repeat center center/cover;
+    background:url("/img/bg.19.jpg")no-repeat center center/cover;
     height:112vh;
     top:0px;
     left:0px;
@@ -528,7 +528,8 @@ details summary{
     color: white;
     background-color: brown;
     border-radius: 13px;
-    border: 2px solid black;
+    border: none;
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
     cursor: pointer;
     padding: 7px 17px;
     font-size: 20px;
