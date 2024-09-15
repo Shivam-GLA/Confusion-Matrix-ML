@@ -454,8 +454,6 @@ form {
 }
 .text-img{
     color:#510d0d;
-    /* text-shadow:-3px -2px 2px rgb(255, 205, 205); */
-
 }
 .visibility{
     opacity:0;
@@ -464,27 +462,14 @@ form {
     /* background-color: #fff700; */
     background: white;
     width:100vw;
-    /* height:90vh; */
-    /* height:220vh; */
-    /* height:200vh; */
-    /* border:6px solid black; */
     font-size: 2rem;
-    /* position: relative; */
-    /* z-index: 1; */
 }
 .details-container{
     /* border:8px solid blue; */
     padding-left:20px;
     margin-top:40px;
 }
-#details-1{
-    /* border:5px solid green; */
-    /* height:100vh; */
-}
 
-#details-2{
-    /* border:3px solid green; */
-}
 details{
     /* border:9px solid purple; */
     color:black;
